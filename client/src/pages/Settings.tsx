@@ -104,7 +104,7 @@ export default function Settings() {
             <div>
               <h3 className="text-wsb-text font-medium">Version</h3>
               <p className="text-wsb-text-secondary text-sm">
-                WindSurfer SneakerBot v0.9.0 (Beta)
+                SneakerBot v0.9.0
               </p>
             </div>
             <button

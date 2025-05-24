@@ -1,4 +1,4 @@
-# WindSurfer SneakerBot
+# SneakerBot
 
 A powerful cross-platform automation tool for purchasing limited-edition sneakers from Nike, SNKRS, Shopify, and Footsites.
 
@@ -28,8 +28,8 @@ A powerful cross-platform automation tool for purchasing limited-edition sneaker
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/windsurf-sneakerbot.git
-cd windsurf-sneakerbot
+git clone https://github.com/your-username/sneakerbot.git
+cd sneakerbot
 ```
 
 2. Install dependencies:
@@ -90,18 +90,18 @@ Packaged applications will be created in the `dist` directory.
 
 ## Architecture
 
-- **Frontend:** Electron + React 18 + TailwindCSS
-- **Backend:** Node.js 20 + TypeScript
-- **Automation:** Microsoft Playwright
-- **Database:** SQLite (local storage)
-- **Encryption:** AES-256-GCM
+- Frontend: Electron + React 18 + TailwindCSS
+- Backend: Node.js 20 + TypeScript
+- Automation: Microsoft Playwright
+- Database: SQLite (local storage)
+- Encryption: AES-256-GCM
 
 ## Developer Documentation
 
 ### Project Structure
 
 ```
-windsurf-sneakerbot/
+sneakerbot/
 ├── electron/         # Electron main process code
 ├── src/              # Core bot functionality and business logic
 ├── client/           # React frontend application
@@ -119,11 +119,11 @@ To create a new module:
 
 ## Legal Disclaimer
 
-This software is provided for educational purposes only. Using automated checkout bots may violate retailers' Terms of Service and local laws. Users are responsible for ensuring their usage is ethical and legal.
+This software is provided for educational purposes only. Using custom checkout bots may violate retailers' Terms of Service and local laws. Users are responsible for ensuring their usage is ethical and legal.
 
 ## Support
 
-For issues, feature requests, or questions, please [open an issue](https://github.com/your-username/windsurf-sneakerbot/issues).
+For issues, feature requests, or questions, please [open an issue](https://github.com/your-username/sneakerbot/issues).
 
 ## License
 

@@ -18,15 +18,15 @@ const navigation = [
 
 export default function Sidebar() {
   return (
-    <div className="flex flex-col w-64 bg-wsb-dark-panel border-r border-gray-800">
+    <div className="flex flex-col w-64 bg-dark-panel border-r border-gray-800">
       {/* Logo */}
       <div className="flex items-center h-16 px-4 border-b border-gray-800">
         <img 
-          src="/windsurf-logo.svg" 
-          alt="WindSurfer Logo" 
+          src="/sneakerbot-logo.svg" 
+          alt="SneakerBot Logo" 
           className="h-8 w-8 mr-2" 
         />
-        <span className="text-xl font-semibold text-wsb-text">WindSurfer</span>
+        <span className="text-xl font-semibold text-wsb-text">SneakerBot</span>
       </div>
       
       {/* Navigation */}

@@ -1,5 +1,5 @@
-# Windsurf Deploys Configuration (Beta)
-# This is an auto-generated file used to store your app deployment configuration. Do not modify.
+# SneakerBot Deploys Configuration (Beta)
+# This file stores your app deployment configuration.
 # The ID of the project (different from project name) on the provider's system. This is populated as a way to update existing deployments.
 project_id: 76a6a939-1341-4bcb-a0da-310a0bc28924
 # The framework of the web application (examples: nextjs, react, vue, etc.)

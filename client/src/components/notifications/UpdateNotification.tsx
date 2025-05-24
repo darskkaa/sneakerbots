@@ -14,8 +14,8 @@ export default function UpdateNotification({ type, onClose }: UpdateNotification
     : 'Update Ready to Install';
   
   const message = type === 'available'
-    ? 'A new version of WindSurfer SneakerBot is available and is being downloaded.'
-    : 'A new version of WindSurfer SneakerBot has been downloaded and is ready to install.';
+    ? 'A new version of SneakerBot is available and is being downloaded.'
+    : 'A new version of SneakerBot has been downloaded and is ready to install.';
   
   const action = type === 'downloaded'
     ? (
