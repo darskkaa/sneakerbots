@@ -128,4 +128,4 @@ For issues, feature requests, or questions, please [open an issue](https://githu
 
 ## License
 
-This project is proprietary software. All rights reserved.
+This is a personal project-simply for personal use and learning material!
