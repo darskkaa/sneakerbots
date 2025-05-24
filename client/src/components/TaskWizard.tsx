@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabaseClient'
 
 export default function TaskWizard() {
-  const [profiles, setProfiles] = useState([])
+  const [profiles, setProfiles] = useState<any[]>([])
   const [loadingProfiles, setLoadingProfiles] = useState(true)
   const [form, setForm] = useState({
     site: '',
