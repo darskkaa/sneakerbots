@@ -36,34 +36,35 @@ export default function CreateProfile() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setMessage('')
+    e.preventDefault();
+    setLoading(true);
+    setMessage('');
 
-    const { error } = await supabase.from('profiles').insert([
-      {
-        name: form.name,
-        email: form.email,
-        card_token: form.card_token,
-        billing_info: form.billing,
-        shipping_info: form.shipping
-      }
-    ])
+    const payload = {
+      name: form.name,
+      email: form.email,
+      card_token: form.card_token,
+      billing_info: form.billing,
+      shipping_info: form.shipping
+    };
+    console.log('Inserting profile (no-auth mode):', payload);
+
+    const { error } = await supabase.from('profiles').insert([payload]);
 
     if (error) {
-      setMessage(`❌ ${error.message}`)
+      console.error('Supabase insert error:', error);
+      setMessage(`❌ ${error.message}`);
     } else {
-      setMessage('✅ Profile created successfully!')
+      setMessage('✅ Profile created!');
       setForm({
         name: '',
         email: '',
         card_token: '',
         billing: { address: '', city: '', zip: '', country: '' },
         shipping: { address: '', city: '', zip: '', country: '' }
-      })
+      });
     }
-
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
