@@ -90,11 +90,12 @@ Packaged applications will be created in the `dist` directory.
 
 ## Architecture
 
-- Frontend: Electron + React 18 + TailwindCSS
-- Backend: Node.js 20 + TypeScript
-- Automation: Microsoft Playwright
-- Database: SQLite (local storage)
-- Encryption: AES-256-GCM
+- **Frontend:** Electron + React 18 + TailwindCSS (Vite-powered)
+- **Backend as a Service:** Supabase (PostgreSQL database, Auth, API, Storage)
+- **API:** Supabase client SDK for all database and authentication operations
+- **Encryption:** AES-256-GCM for local sensitive data
+
+> SneakerBot now uses Supabase for all persistent storage, user authentication, and real-time data sync. No local SQLite or Playwright automation is used in this version.
 
 ## Developer Documentation
 
