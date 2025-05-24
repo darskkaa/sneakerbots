@@ -1,0 +1,9 @@
+{
+  "name": "windsurf-sneakerbot-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build"
+  }
+}
