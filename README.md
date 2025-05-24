@@ -1,4 +1,4 @@
-# SneakerBot
+# Adil_SneakerBot
 
 A powerful cross-platform automation tool for purchasing limited-edition sneakers from Nike, SNKRS, Shopify, and Footsites.
 
