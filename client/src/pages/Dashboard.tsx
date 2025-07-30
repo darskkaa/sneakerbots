@@ -214,38 +214,9 @@ export default function Dashboard() {
                 No activities found
               </div>
             )}
-    </div>
-
-    {/* Stats Grid */}
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {dashboardStats.map((stat, index) => (
-        <StatCard
-          key={index}
-          title={stat.title}
-          value={stat.value}
-          icon={stat.icon}
-        />
-      ))}
-    </div>
-
-    {/* Recent Activities */}
-    <div className="mt-8">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-medium text-white">Recent Activities</h2>
-      </div>
-      <div className="mt-4 overflow-hidden bg-dark-panel rounded-lg shadow">
-        <div className="divide-y divide-gray-700">
-          {activities.length > 0 ? (
-            activities.map((activity) => (
-              <ActivityItem key={activity.id} activity={activity} />
-            ))
-          ) : (
-            <div className="p-6 text-center text-gray-400">
-              No activities found
-            </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
