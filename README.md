@@ -1,10 +1,11 @@
 # SneakerBot
-Created by Adil:
+Created by Adil Al-Farsi
 
 A powerful cross-platform automation tool for purchasing limited-edition sneakers from Nike, SNKRS, Shopify, and Footsites.
 
-![Version](https://img.shields.io/badge/version-0.9.0-blue.svg)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)
+[![Version](https://img.shields.io/badge/version-0.9.0-blue.svg)](https://github.com/darskkaa/sneakerbot)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)](https://github.com/darskkaa/sneakerbot)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_SITE_ID/deploy-status)](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_NAME/deploys)
 
 ## Features
 
@@ -29,7 +30,7 @@ A powerful cross-platform automation tool for purchasing limited-edition sneaker
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/sneakerbot.git
+git clone https://github.com/darskkaa/sneakerbot.git
 cd sneakerbot
 ```
 
@@ -47,6 +48,45 @@ cd ..
 ```bash
 npm run dev
 ```
+
+## Deployment
+
+### Netlify Deployment
+
+The frontend of SneakerBot is configured for easy deployment on Netlify. Follow these steps to deploy your own instance:
+
+1. **Deploy to Netlify**
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/darskkaa/sneakerbot)
+
+2. **Manual Deployment**
+   - Push your code to a GitHub repository
+   - Sign in to [Netlify](https://app.netlify.com/)
+   - Click on "Add new site" > "Import an existing project"
+   - Select your Git provider and repository
+   - Configure the build settings:
+     - Build command: `cd client && npm install && npm run build`
+     - Publish directory: `client/dist`
+   - Click "Deploy site"
+
+3. **Environment Variables** (if needed)
+   - Go to "Site settings" > "Build & deploy" > "Environment"
+   - Add any required environment variables
+   - Trigger a new deploy to apply the changes
+
+4. **Custom Domain** (optional)
+   - Go to "Domain settings"
+   - Click "Add custom domain" and follow the instructions
+
+### Build for Production
+
+To build the application for production:
+
+```bash
+cd client
+npm run build
+```
+
+The production build will be available in the `client/dist` directory.
 
 ### Building for Production
 
