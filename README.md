@@ -1,5 +1,5 @@
 # SneakerBot
-Created by Adil Al-Farsi
+Created by Adil
 
 A powerful cross-platform automation tool for purchasing limited-edition sneakers from Nike, SNKRS, Shopify, and Footsites.
 
