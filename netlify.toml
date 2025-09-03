@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "cd client && npm install && npm run build"
   publish = "client/dist"
   base = "/"
 
@@ -8,7 +8,7 @@
   NPM_FLAGS = "--legacy-peer-deps"
 
 [dev]
-  command = "npm run dev"
+  command = "cd client && npm run dev"
   port = 3000
   targetPort = 3000
   publish = "client"
