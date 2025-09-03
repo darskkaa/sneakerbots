@@ -1,12 +1,11 @@
 {
-  "name": "sneakerbot-client",
-  "version": "0.1.0",
+  "name": "sneakerbot",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "install": "cd client && npm install",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "dev": "cd client && npm run dev"
   },
-  "dependencies": {
-    "contentful": "^11.7.15"
-  }
+  "dependencies": {}
 }
