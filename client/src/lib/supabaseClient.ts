@@ -14,10 +14,16 @@ const createMockClient = () => {
       signInWithPassword: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
       signOut: () => Promise.resolve({ error: null }),
     },
-    from: () => ({
-      select: () => Promise.resolve({ data: [], error: null }),
-      insert: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
-      update: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
+    from: (table: string) => ({
+      select: (columns?: string) => ({
+        single: () => Promise.resolve({ data: null, error: null }),
+        order: (column: string, options?: { ascending?: boolean }) => ({
+          limit: (count: number) => Promise.resolve({ data: [], error: null }),
+        }),
+        limit: (count: number) => Promise.resolve({ data: [], error: null }),
+      }),
+      insert: (data: any) => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
+      update: (data: any) => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
       delete: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
     }),
   };

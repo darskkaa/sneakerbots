@@ -32,13 +32,13 @@ interface StatCardProps {
 
 // StatCard component for displaying individual statistics
 const StatCard = ({ title, value, icon }: StatCardProps) => (
-  <div className="bg-dark-panel rounded-lg p-6 shadow">
+  <div className="bg-wsb-dark-panel rounded-lg p-6 shadow">
     <div className="flex items-center justify-between">
       <div>
-        <p className="text-sm font-medium text-gray-400">{title}</p>
-        <p className="mt-1 text-2xl font-semibold text-white">{value}</p>
+        <p className="text-sm font-medium text-wsb-text-secondary">{title}</p>
+        <p className="mt-1 text-2xl font-semibold text-wsb-text">{value}</p>
       </div>
-      <div className="rounded-full bg-dark-panel p-3">
+      <div className="rounded-full bg-wsb-dark-panel p-3">
         {icon}
       </div>
     </div>
@@ -61,14 +61,14 @@ const ActivityItem = ({ activity }: { activity: ActivityLog }) => {
   };
 
   return (
-    <div className="flex items-start space-x-3 p-4 hover:bg-dark-panel/50 rounded-lg transition-colors">
+    <div className="flex items-start space-x-3 p-4 hover:bg-wsb-dark-panel/50 rounded-lg transition-colors">
       <div className="flex-shrink-0 mt-0.5">
         {getActivityIcon()}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-white">{activity.message}</p>
+        <p className="text-sm font-medium text-wsb-text">{activity.message}</p>
         {activity.details && (
-          <p className="text-sm text-gray-400 mt-1">{activity.details}</p>
+          <p className="text-sm text-wsb-text-secondary mt-1">{activity.details}</p>
         )}
         <p className="text-xs text-gray-500 mt-1">{activity.timestamp}</p>
       </div>
@@ -180,8 +180,8 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-white">Dashboard</h1>
-        <p className="mt-1 text-sm text-gray-400">
+        <h1 className="text-2xl font-bold text-wsb-text">Dashboard</h1>
+        <p className="mt-1 text-sm text-wsb-text-secondary">
           Overview of your sneaker bot activities and performance.
         </p>
       </div>
