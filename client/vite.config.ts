@@ -23,5 +23,13 @@ export default defineConfig({
   build: {
     outDir: 'dist', // Use Netlify default for static hosting
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          supabase: ['@supabase/supabase-js'],
+        },
+      },
+    },
   },
 });
