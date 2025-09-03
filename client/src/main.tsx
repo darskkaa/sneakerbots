@@ -31,22 +31,12 @@ if (!rootElement) {
     
     const root = ReactDOM.createRoot(rootElement);
     
-    // Test component to verify React is working
-    const TestComponent = () => {
-      console.log('TestComponent is rendering');
-      return <div style={{ color: 'white', padding: '20px', backgroundColor: 'red' }}>
-        Test Component - If you see this, React is working but there might be an issue with the main App component
-      </div>;
-    };
-    
     root.render(
       <React.StrictMode>
         <ErrorBoundary>
           <QueryClientProvider client={queryClient}>
             <BrowserRouter>
-              <TestComponent />
-              {/* Temporarily comment out App to test if basic rendering works */}
-              {/* <App /> */}
+              <App />
             </BrowserRouter>
           </QueryClientProvider>
         </ErrorBoundary>
