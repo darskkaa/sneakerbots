@@ -1,5 +1,5 @@
 # SneakerBot
-Created by Adil Al-Farsi
+Created by Adil
 
 A powerful cross-platform automation tool for purchasing limited-edition sneakers from Nike, SNKRS, Shopify, and Footsites.
 
@@ -43,9 +43,18 @@ npm install
 cd ..
 ```
 
-3. Run in development mode:
+3. Set up environment variables:
 
 ```bash
+cd client
+cp .env.example .env.local
+# Edit .env.local with your Supabase credentials
+```
+
+4. Run in development mode:
+
+```bash
+cd client
 npm run dev
 ```
 
@@ -163,9 +172,45 @@ To create a new module:
 
 This software is provided for educational purposes only. Using custom checkout bots may violate retailers' Terms of Service and local laws. Users are responsible for ensuring their usage is ethical and legal.
 
+## Supabase Setup
+
+This application uses Supabase for authentication and database. To set up:
+
+1. Create a new project at [Supabase](https://supabase.com)
+2. Get your project URL and anon key from Settings > API
+3. Create the following tables in your Supabase database:
+
+```sql
+-- Table: profiles
+create table profiles (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid references auth.users(id) on delete cascade,
+    name text not null,
+    email text not null,
+    billing_info jsonb,
+    shipping_info jsonb,
+    card_token text,
+    created_at timestamp with time zone default timezone('utc', now()) not null
+);
+
+-- Table: tasks
+create table tasks (
+    id uuid primary key default gen_random_uuid(),
+    site text not null,
+    product_url text not null,
+    size text,
+    quantity int,
+    profile_id uuid references profiles(id) on delete cascade,
+    status text,
+    created_at timestamp with time zone default timezone('utc', now()) not null
+);
+```
+
+4. Update your `.env.local` file with your Supabase credentials
+
 ## Support
 
-For issues, feature requests, or questions, please [open an issue](https://github.com/your-username/sneakerbot/issues).
+For issues, feature requests, or questions, please [open an issue](https://github.com/darskkaa/sneakerbots/issues).
 
 ## License
 

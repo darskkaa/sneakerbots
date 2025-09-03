@@ -20,25 +20,25 @@ export default function Signup() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-wsb-dark-base">
-      <div className="bg-dark-panel p-8 rounded-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold text-white mb-6">Sign Up</h1>
+      <div className="bg-wsb-dark-panel p-8 rounded-lg w-full max-w-md">
+        <h1 className="text-2xl font-bold text-wsb-text mb-6">Sign Up</h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>
-          <label className="block text-gray-400">Email</label>
+          <label className="block text-wsb-text-secondary">Email</label>
           <input
             type="email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-2 mb-4 rounded bg-wsb-dark-600 text-white"
+            className="w-full p-2 mb-4 rounded bg-gray-800 text-wsb-text border border-gray-700 focus:outline-none focus:ring-2 focus:ring-wsb-primary focus:border-wsb-primary"
           />
-          <label className="block text-gray-400">Password</label>
+          <label className="block text-wsb-text-secondary">Password</label>
           <input
             type="password"
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-2 mb-4 rounded bg-wsb-dark-600 text-white"
+            className="w-full p-2 mb-4 rounded bg-gray-800 text-wsb-text border border-gray-700 focus:outline-none focus:ring-2 focus:ring-wsb-primary focus:border-wsb-primary"
           />
           <button
             type="submit"
@@ -47,7 +47,7 @@ export default function Signup() {
             {loading ? <LoadingSpinner size="sm" /> : 'Sign Up'}
           </button>
         </form>
-        <p className="mt-4 text-gray-400">
+        <p className="mt-4 text-wsb-text-secondary">
           Already have an account? <Link to="/login" className="text-wsb-primary">Sign In</Link>
         </p>
       </div>
