@@ -15,13 +15,7 @@ const createMockClient = () => {
       signOut: () => Promise.resolve({ error: null }),
     },
     from: (table: string) => ({
-      select: (columns?: string) => ({
-        single: () => Promise.resolve({ data: null, error: null }),
-        order: (column: string, options?: { ascending?: boolean }) => ({
-          limit: (count: number) => Promise.resolve({ data: [], error: null }),
-        }),
-        limit: (count: number) => Promise.resolve({ data: [], error: null }),
-      }),
+      select: (columns?: string) => Promise.resolve({ data: [], error: null }),
       insert: (data: any) => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
       update: (data: any) => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
       delete: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),

@@ -94,20 +94,17 @@ export default function Dashboard() {
     try {
       setLoading(true);
       
-      // Fetch stats from Supabase
+      // Fetch stats from Supabase (simplified for mock client)
       const { data: statsData, error: statsError } = await supabase
         .from('dashboard_stats')
-        .select('*')
-        .single();
+        .select('*');
       
       if (statsError) throw statsError;
       
-      // Fetch recent activities
+      // Fetch recent activities (simplified for mock client)
       const { data: activitiesData, error: activitiesError } = await supabase
         .from('activities')
-        .select('*')
-        .order('created_at', { ascending: false })
-        .limit(10);
+        .select('*');
       
       if (activitiesError) throw activitiesError;
       
@@ -120,12 +117,13 @@ export default function Dashboard() {
         details: activity.details
       }));
       
-      if (statsData) {
+      if (statsData && statsData.length > 0) {
+        const stats = statsData[0];
         setStats({
-          totalCheckouts: statsData.total_checkouts || 0,
-          activeTasks: statsData.active_tasks || 0,
-          successRate: statsData.success_rate || 0,
-          failedAttempts: statsData.failed_attempts || 0
+          totalCheckouts: stats.total_checkouts || 0,
+          activeTasks: stats.active_tasks || 0,
+          successRate: stats.success_rate || 0,
+          failedAttempts: stats.failed_attempts || 0
         });
       }
       
